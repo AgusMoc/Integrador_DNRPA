@@ -46,7 +46,7 @@ public class SistemaDNRPA {
         return perBuscada;
     }
     public Persona ingresarPersonaSINOexisteDNI() {
-        System.out.println("Ingrese el dni: ");
+        System.out.println("Ingrese el dni: (solo admitidos hasta 8 carácteres) ");
         String dni = sc.nextLine();
         Persona nuevaPersona = buscarPersonaXDni(dni);
         if (nuevaPersona == null) {
@@ -78,9 +78,14 @@ public class SistemaDNRPA {
     }
     //Ingreso según la clase el automotor que quiero. Validando las personas y eligiendo seccional, uso y propulsión de unos enums
     public void ingresarAutomotor() {
+        int op=99;
         System.out.println("Selecciones que tipo de automotor quiere ingresar: 1-AUTO; 2-MOTO; 3-CAMION; 4-COLECTIVO; 5-UTILITARIO ; 0-SALIR");
-        int op = Integer.parseInt(sc.nextLine());
-        switch (op) {
+        try {
+             op = Integer.parseInt(sc.nextLine());
+        }catch (Exception e){
+            op = 99;
+        }
+         switch (op) {
             case 1 -> registros.add(new Auto(elegirSeccional(), ingresarPersonaSINOexisteDNI(), elegirTipoUso(),autorizados(), elegirPropulsion()));
             case 2 -> registros.add(new Moto(elegirSeccional(), ingresarPersonaSINOexisteDNI(), elegirTipoUso(),autorizados(),elegirPropulsion()));
             case 3 -> registros.add(new Camion(elegirSeccional(), ingresarPersonaSINOexisteDNI(), elegirTipoUso(),autorizados()));

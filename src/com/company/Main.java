@@ -31,14 +31,16 @@ public class Main {
 //--------------------------------------------------------------------------------------------
         Scanner sc = new Scanner(System.in);
         int opcion;
+        System.out.println("-------------------------------------------------------");
+        System.out.println("Bienvenido al sistema de la DNRPA ");
         do {
             System.out.println("-------------------------------------------------------");
-            System.out.println("1. Opcion 1 - Listar todos los autos registrados");
-            System.out.println("2. Opcion 2 - Listar a todos los propietarios de camiones(en orden alfabético)");
+            System.out.println("1. Opcion 1 - Listar todos los AUTOS registrados");
+            System.out.println("2. Opcion 2 - Listar a todos los propietarios de CAMIONES(en orden alfabético)");
             System.out.println("3. Opcion 3 - Cambiar de propietario ");
             System.out.println("4. Opción 4 - Dar de alta un nuevo automotor");
             System.out.println("5. Opcion 5 - Consultar si pasó un año o más desde el registro o cambio de titular (por patente)");
-            System.out.println("6. Opcion 6 - Listar todos los automotores");
+            System.out.println("6. Opcion 6 - Listar todos los registos existentes");
             System.out.println("0. Opcion 0 - Salir");
             System.out.println("Escribe una de las opciones");
             System.out.println("-------------------------------------------------------");
